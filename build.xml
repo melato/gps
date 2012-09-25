@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="org.melato.gps" basedir=".">	
+	<property name="project.version" value="0.1"/>
+	<import file="${dev.dir}/project/java.xml"/>
+</project>

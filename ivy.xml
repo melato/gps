@@ -1,0 +1,13 @@
+<ivy-module version="1.0">
+    <info organisation="org.melato" module="${ant.project.name}"/>
+    <configurations>
+        <include file="${dev.dir}/project/ivy/configurations.xml"/>
+    </configurations>
+	<publications>
+		<artifact name="${ant.project.name}" conf="compile"/>
+		<artifact name="${ant.project.name}-src" type="source" ext="tar.gz" conf="src"/>
+	</publications>
+    <dependencies>
+        <dependency org="org.junit" name="junit" rev="4.4" conf="test->default"/>
+    </dependencies>
+</ivy-module>
