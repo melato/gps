@@ -102,6 +102,14 @@ public class Point implements Serializable {
 		this.elevation = elevation;
 		this.time = time;				
 	}
+	public Point(Point p) {
+	  this.lat = p.lat;
+	  this.lon = p.lon;
+	  this.elevation = p.elevation;
+	  this.time = p.time;
+	  this.speed = p.speed;
+	  this.bearing = p.bearing;
+	}
 	
 	@Override
 	public boolean equals(Object x) {
