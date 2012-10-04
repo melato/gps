@@ -71,15 +71,11 @@ public class Point implements Serializable {
 
 	/** Return the time difference between two points, in seconds. */
 	public static float timeDifference(Point p1, Point p2) {
-		if ( p1.time == 0 || p2.time == 0)
-			return 0;
 		return ((float) (p2.time - p1.time)) / 1000;
 	}
 	
   /** Return the time difference between two points, in milliseconds. */
   public static long timeDifferenceMillis(Point p1, Point p2) {
-    if ( p1.time == 0 || p2.time == 0)
-      return 0;
     return p2.time - p1.time;
   }
   
