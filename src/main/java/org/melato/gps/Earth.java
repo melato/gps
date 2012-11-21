@@ -30,7 +30,7 @@ public class Earth {
    * Haversine formula
    * http://en.wikipedia.org/wiki/Great-circle_distance
    * */
-  public static float distance(Point p1, Point p2) {
+  public static float distance(Point2D p1, Point2D p2) {
     double lat1 = Math.toRadians(p1.lat);
     double lat2 = Math.toRadians(p2.lat);
     double lon1 = Math.toRadians(p1.lon);
@@ -75,7 +75,7 @@ public class Earth {
    * The bearing is the angle you have to travel from p1 east of North in order to reach p2 on a great circle.
    * @return
    */
-  public static float bearing( Point p1, Point p2 ) {
+  public static float bearing( Point2D p1, Point2D p2 ) {
     double lat1 = Math.toRadians(p1.lat);
     double lat2 = Math.toRadians(p2.lat);
     double lon1 = Math.toRadians(p1.lon);
@@ -89,8 +89,8 @@ public class Earth {
 	 * Compute the speed between two GPS measurements, in metric units (m/s).
 	 * @return
 	 */
-	public static float speed( Point p1, Point p2 ) {
-		float time = Point.timeDifference(p1, p2);
+	public static float speed( PointTime p1, PointTime p2 ) {
+		float time = PointTime.timeDifference(p1, p2);
 		if ( time == 0 )
 			return 0;
 		return (float) (distance(p1, p2) / time );
