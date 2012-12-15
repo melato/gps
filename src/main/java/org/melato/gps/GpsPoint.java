@@ -20,6 +20,7 @@ package org.melato.gps;
 
 
 public class GpsPoint extends PointTime {
+  private static final long serialVersionUID = 1L;
   /** GPX uses the term elevation, rather than altitude. */
   public float elevation = Float.NaN;
   public float speed = Float.NaN;
