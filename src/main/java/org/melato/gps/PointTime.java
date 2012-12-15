@@ -72,5 +72,8 @@ public class PointTime extends Point2D implements Serializable {
     this.time = p.time;
   }
   
-
+  @Override
+  public String toString() {
+    return time + " " + super.toString();
+  }
 }
