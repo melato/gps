@@ -38,7 +38,7 @@ public class PointTime extends Point2D implements Serializable {
     return new Date(time);
   }
 
-  /** Return the time difference between two points, in seconds. */
+  /** Return the time difference between two points (p2-p1), in seconds. */
   public static float timeDifference(PointTime p1, PointTime p2) {
     return ((float) (p2.time - p1.time)) / 1000;
   }
