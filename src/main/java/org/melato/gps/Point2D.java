@@ -20,6 +20,7 @@ package org.melato.gps;
 
 import java.io.Serializable;
 
+/** A 2-dimensional geographical point with latitude and longitude. */
 public class Point2D implements Serializable {
   private static final long serialVersionUID = 1L;
   public float  lat;

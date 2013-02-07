@@ -21,6 +21,7 @@ package org.melato.gps;
 import java.io.Serializable;
 import java.util.Date;
 
+/** A point at a certain time. */
 public class PointTime extends Point2D implements Serializable {
   private static final long serialVersionUID = 1L;
   public long   time;

@@ -18,7 +18,7 @@
  */
 package org.melato.gps;
 
-
+/** A 3-dimensional geographical point in time with 2-dimensional speed. */
 public class GpsPoint extends PointTime {
   private static final long serialVersionUID = 1L;
   /** GPX uses the term elevation, rather than altitude. */
