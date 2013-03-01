@@ -18,44 +18,42 @@
  */
 package org.melato.gps;
 
-/** A 3-dimensional geographical point in time with 2-dimensional speed. */
-public class GpsPoint extends Point4D {
+/** A 3-dimensional geographical point in time. */
+public class Point4D extends PointTime {
   private static final long serialVersionUID = 1L;
-  public float speed = Float.NaN;
-  public float bearing = Float.NaN;
+  /** GPX uses the term elevation, rather than altitude. */
+  public float elevation = Float.NaN;
   
-  public float getSpeed() {
-    return speed;
+  public float getElevation() {
+    return elevation;
   }
-  public void setSpeed(float speed) {
-    this.speed = speed;
+  public void setElevation(float elevation) {
+    this.elevation = elevation;
   }
-    
-  public float getBearing() {
-    return bearing;
+  
+  public void setAltitude(float elevation) {
+    setElevation(elevation);
   }
-  public void setBearing(float bearing) {
-    this.bearing = bearing;
+  
+  public float getAltitude() {
+    return getElevation();
   }
-
-  public GpsPoint() {    
+  
+  public Point4D() {    
   }
-  public GpsPoint(float lat, float lon) {
+  public Point4D(float lat, float lon) {
     super(lat, lon);
   }
-  public GpsPoint(Point2D p) {
+  public Point4D(Point2D p) {
     super(p);
   }
-  public GpsPoint(PointTime p) {
+  public Point4D(PointTime p) {
     super(p);
   }
-  public GpsPoint(Point4D p) {
+  
+  public Point4D(Point4D p) {
     super(p);
-  }
-  public GpsPoint(GpsPoint p) {
-    super(p);
-    speed = p.speed;
-    bearing = p.bearing;
+    elevation = p.elevation;
   }
 
 }
