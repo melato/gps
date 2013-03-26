@@ -41,8 +41,8 @@ public class Point2D implements Serializable {
   
   @Override
   public boolean equals(Object x) {
-    if ( x instanceof PointTime ) {
-      PointTime p = (PointTime) x;
+    if ( x instanceof Point2D ) {
+      Point2D p = (Point2D) x;
       return lat == p.lat && lon == p.lon;
     }
     return false;
